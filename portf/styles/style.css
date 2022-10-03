@@ -1,0 +1,105 @@
+.header {
+    background-color: orange;
+   
+    
+}
+.wrapper{
+    background-color: orange;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__image{
+    width: 260px;
+    height: 65px;
+}
+.logo__title{
+    margin-left: 250px;
+    font-weight: bold;
+    font-size: 36px;
+
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+.list__item{
+    margin-right: 10px;
+}
+
+.main{
+    background-color: orange;
+}
+.content__main{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.me__photo{
+    height: 200px;
+}
+.hero__info{
+    
+    
+    padding-top: 20px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 292px;
+}
+.info{
+    display: flex;
+    padding-top: 20px;
+}
+.info__osebe{
+    margin-left: 50px;
+    
+}
+.info__likes{
+    margin-left: 20px;
+}
+.content__images{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+.content__images_rev{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+.imgs{
+    width: 220px;
+    height: 140px;
+}
+.imgsl{
+    width: 440px;
+    height: 280px;
+}
+.imgs__title{
+    
+    margin-bottom: 10px;
+    font-family: Forum;
+    font-size: 10px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+}
+.green{
+    color: #00ff00;
+}
+.blue{
+    color: #0000ff;
+}

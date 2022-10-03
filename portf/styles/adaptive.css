@@ -1,0 +1,78 @@
+@media (max-width: 768px) {
+
+    .wrapper{
+        max-width: 728px;
+    }
+    .logo__title{
+        margin-left: 40px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .name {
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 236px;
+    }
+    .info__osebe {
+        font-size: 15px;
+    }
+    .info__likes{
+        font-size: 15px;
+    }
+    .imgs{
+        width: 180px;
+        height: 100px;
+    }
+    .imgs__title{
+        margin-bottom: 10px;
+        font-family: Forum;
+        font-size: 7px;
+        line-height: 35px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #000;
+    }
+    .imgsl {
+        width: 340px;
+        height: 180px;
+    }
+
+}
+@media (max-width: 420px) {
+    
+    .wrapper {
+        max-width: 380px;
+      }
+
+    .name{
+        font-size: 15px;
+        margin-left: 93px;
+    }
+    .me__photo{
+        height: 160px;
+    }
+    .info__osebe{
+        font-size: 9px;
+    }
+    .info__likes{
+        font-size: 9px;
+    }
+    
+    .logo__image{
+        width: 130px;
+        height: 50px;
+    }
+    .logo__title{
+        font-size: 13px;
+    }
+
+    
+    .content__images{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content__images_rev {
+        display: grid;
+        grid-template-columns: 1fr;       
+        justify-items: center;
+    }
+}
