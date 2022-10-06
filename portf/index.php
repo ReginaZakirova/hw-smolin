@@ -31,6 +31,9 @@
                     <li class="list__item">
                         <a class="list__link list__link_disabled" href="strings.php" target="_blank">Строки</a>
                     </li>
+                    <li class="list__item">
+                        <a class="list__link list__link_disabled" href="https://github.com/ReginaZakirova/hw-smolin/tree/main/arrays" target="_blank">Массивы</a>
+                    </li>
                 </ul>
             </nav>
         </div>
