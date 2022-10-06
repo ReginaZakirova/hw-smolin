@@ -11,6 +11,30 @@
 </head>
 
 <body>
+    <?php
+    function schetdat(){
+        $now = time();
+        $my_date = strtotime("1999-08-24");
+        $datediff = $now - $my_date;
+      return  $res = round($datediff / (60 * 60 * 24));       
+    }
+    function colorRand(){
+        $array = Array('red', 'green', 'blue');
+        $rand = array_rand($array);
+        echo $str = ("<p style=\"color:$array[$rand];\">Возраст: 23 года</p>");
+    }
+    function changeColor($string){
+        $arr = explode(' ',$string);
+        $i=0;
+        foreach ($arr as $value){
+            if($i%2==0){
+             $str2 = $str2."<span class='green'>".$arr[$i]."</span> ";
+             }else $str2 = $str2."<span class='blue'>".$arr[$i]."</span> ";          
+             $i++;
+        }
+      echo $str2; 
+    }
+    ?>
  <header class="header">
     <div class="wrapper">
         <div class="content__header">
@@ -53,17 +77,12 @@
                 <div class="info">
                     <div class="info__osebe">
                     <?php
-                        $array = Array('red', 'green', 'blue');
-                        $rand = array_rand($array);
-                        echo $str = ("<p style=\"color:$array[$rand];\">Возраст: 23 года</p>");
+                        colorRand();
                         ?>
                         Дата рождения: 24.08.1999 <br>
                         Текущая дата: <?php echo date ("d/m/Y"); ?> <br> 
-                        <?php 
-                            $now = time();
-                            $my_date = strtotime("1999-08-24");
-                            $datediff = $now - $my_date;               
-                            echo "прожито дней: " . round($datediff / (60 * 60 * 24)); 
+                        <?php              
+                            echo "прожито дней: " . schetdat(); 
                             "<br>";
                         ?> <br>
                         Хобби: Люблю слушать музыку <br>
@@ -74,15 +93,7 @@
                     <div class="info__likes">
                         <?php
                         $str1 = "На данном этапе все понравилось <br> Посмотрим, что будет дальше";
-                        $arr = explode(' ',$str1);
-                        $i=0;
-                        foreach ($arr as $value){
-                            if($i%2==0){
-                                $str2 = $str2."<span class='$array[1]'>".$arr[$i]."</span> ";
-                            }else $str2 = $str2."<span class='$array[2]'>".$arr[$i]."</span> ";          
-                            $i++;
-                        }
-                        echo $str2; 
+                        changeColor($str1);
                         ?>
                       
                     </div>
