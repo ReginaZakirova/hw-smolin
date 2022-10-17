@@ -32,6 +32,19 @@
         }else echo 'Введите данные';         
         ?>
        </p>
+       <div class="links">
+       <a href="bitrix.php">Страница битрикс</a>
+       <a href="fact.php">Страница факт</a>
+       </div> 
+       
+       <?php
+         session_start();
+         if (isset($_SESSION['history'])) {
+             echo 'Вы пришли с '.end($_SESSION['history']);
+         }
+         $_SESSION['history'][] = $_SERVER['HTTP_REFERER'];
+        ?>
+       
     </form>
 </body>
 </html>
