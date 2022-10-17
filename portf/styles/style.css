@@ -1,10 +1,9 @@
 .header {
-    background-color: orange;
-   
+    
     
 }
 .wrapper{
-    background-color: orange;
+    
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -35,8 +34,8 @@
 }
 
 .main{
-    background-color: orange;
-}
+    
+    }
 .content__main{
     padding-top: 20px;
     display: flex;

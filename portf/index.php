@@ -1,3 +1,4 @@
+<?session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,9 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: <?=changeBack($_SESSION["Background"])?>">
     <?php
+    session_start();
     function schetdat(){
         $now = time();
         $my_date = strtotime("1999-08-24");
@@ -34,6 +36,19 @@
         }
       echo $str2; 
     }
+    
+    $_SESSION['Background'] = $_POST['colorback'];
+    
+    function changeBack($color){
+        if($color=='pink'){
+            echo "#ff7dda";
+        }elseif($color=='orange'){
+            echo  "#ffd640";
+        }elseif($color=='yellow'){
+            echo  "#efff40";
+        }
+    }
+    
     ?>
  <header class="header">
     <div class="wrapper">
@@ -58,6 +73,17 @@
                     <li class="list__item">
                         <a class="list__link list__link_disabled" href="https://github.com/ReginaZakirova/hw-smolin/tree/main/arrays" target="_blank">Массивы</a>
                     </li>
+                    <li class="list__item">
+                        <a class="list__link list__link_disabled" href="oauth.php" target="_blank">Авторизация</a>
+                    </li>
+                    <form action="" method="post">
+                    <select name="colorback">
+                        <option value="pink">розовый</option>
+                        <option value="orange">оранжевый</option>
+                        <option value="yellow">желтый</option>
+                    </select>
+                    <input type="submit" value="Сменить">
+                    </form>
                 </ul>
             </nav>
         </div>
