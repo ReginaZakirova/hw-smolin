@@ -2,7 +2,7 @@
       session_start();
       $login = $_POST['log'] ;
       $pass = $_POST['passw'];
-      $_SESSION['login'] = $_POST['log']; ''
+      $_SESSION['login'] = $_POST['log']; 
  ?>
 <!DOCTYPE html>
 <html lang="en">

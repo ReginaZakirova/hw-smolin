@@ -1,6 +1,6 @@
 <?session_start();
 if (!empty($_POST['exit']) ) {
-    session_destroy(); ''
+    session_destroy(); 
 }
 ?>
 <!DOCTYPE html>
