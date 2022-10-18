@@ -1,4 +1,8 @@
-<?session_start();?>
+<?session_start();
+if (!empty($_POST['exit']) ) {
+    session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,8 +78,12 @@
                         <a class="list__link list__link_disabled" href="https://github.com/ReginaZakirova/hw-smolin/tree/main/arrays" target="_blank">Массивы</a>
                     </li>
                     <li class="list__item">
-                        <a class="list__link list__link_disabled" href="oauth.php" target="_blank">Авторизация</a>
+                         <a class="list__link list" style ="<?if (!empty($_SESSION['login'])) echo 'display: none';?>" href="oauth.php" target="_blank">Авторизация</a>
+                         <span class="hello" style="<?if (!empty($_SESSION['login'])) echo 'display: block'; else echo 'display: none'; ?>">Привет <?echo $_SESSION['login']?></span>
                     </li>
+                    <form class='exit' style="<?if (!empty($_SESSION['login'])) echo 'display: block'; else echo 'display: none'; ?>" action="" method="post">
+                        <input type="submit" name='exit' value="выход">    
+                    </form>
                     <form action="" method="post">
                     <select name="colorback">
                         <option value="pink">розовый</option>

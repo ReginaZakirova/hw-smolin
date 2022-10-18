@@ -1,6 +1,8 @@
 <?php
+      session_start();
       $login = $_POST['log'] ;
       $pass = $_POST['passw'];
+      $_SESSION['login'] = $_POST['log'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,11 +30,12 @@
            if (count($_POST)> 0){
             if ($login == 'Danil' && md5($_POST["passw"]) == '202cb962ac59075b964b07152d234b70'){
                 echo 'Добро пожаловать';
+                header('Location: index.php');
            } else echo 'Данные не верны';
         }else echo 'Введите данные';         
         ?>
        </p>
-       <div class="links">
+       <div class="links">  
        <a href="bitrix.php">Страница битрикс</a>
        <a href="fact.php">Страница факт</a>
        </div> 
@@ -43,7 +46,7 @@
              echo 'Вы пришли с '.end($_SESSION['history']);
          }
          $_SESSION['history'][] = $_SERVER['HTTP_REFERER'];
-        ?>
+       ?>
        
     </form>
 </body>
