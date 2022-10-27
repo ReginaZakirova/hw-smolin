@@ -1,8 +1,13 @@
 <?php
       session_start();
+      require_once 'connect.php';
       $login = $_POST['log'] ;
-      $pass = $_POST['passw'];
-      $_SESSION['login'] = $_POST['log']; 
+      $pass = md5($_POST["passw"]);
+      $_SESSION['login'] = $_POST['log'];
+      $check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'");
+        //Login - Danil   Regina
+        //Pass - 123        321
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +33,7 @@
        <p>
         <?php
            if (count($_POST)> 0){
-            if ($login == 'Danil' && md5($_POST["passw"]) == '202cb962ac59075b964b07152d234b70'){
+            if (mysqli_num_rows($check_user) > 0){
                 echo 'Добро пожаловать';
                 header('Location: index.php');
            } else echo 'Данные не верны';
