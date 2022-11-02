@@ -1,10 +1,11 @@
 <?php
       session_start();
       require_once 'connect.php';
+      $db = new Connect; 
       $login = $_POST['log'] ;
       $pass = md5($_POST["passw"]);
       $_SESSION['login'] = $_POST['log'];
-      $check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'");
+      $check_user = mysqli_query($db->conn(), "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'");
         //Login - Danil   Regina
         //Pass - 123        321
 
@@ -46,7 +47,7 @@
        </div> 
        
        <?php
-         session_start();
+       
          if (isset($_SESSION['history'])) {
              echo 'Вы пришли с '.end($_SESSION['history']);
          }

@@ -17,7 +17,7 @@ if (!empty($_POST['exit']) ) {
 
 <body style="background-color: <?=changeBack($_SESSION["Background"])?>">
     <?php
-    session_start();
+
     function schetdat(){
         $now = time();
         $my_date = strtotime("1999-08-24");
